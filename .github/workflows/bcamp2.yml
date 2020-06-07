@@ -28,6 +28,6 @@ jobs:
     # Yarn command 
     cmd: install # npm install / yarn install
     - name: Yarn Install 
-    run: npm install -g surge
+      run: npm install -g surge
     - name: deploying on surge
-    run: surge ./build trainig-testing-waqar.surge.sh/ --token $ {{ secrets.TOKEN }}
+      run: surge ./build trainig-testing-waqar.surge.sh --token $ {{ secrets.TOKEN }}
