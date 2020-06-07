@@ -23,14 +23,12 @@ jobs:
   uses: actions/setup-node@v2-beta
   with: 
         version 12: 
-        
-  - name: GitHub Action for Yarn
+    - name: GitHub Action for Yarn
   uses: Borales/actions-yarn@v2.3.0
   with:
     # Yarn command 
     cmd: install # npm install / yarn install
-    
-  - name: Yarn Install 
+   - name: Yarn Install 
     run: npm install -g surge
-  - name: deploying on surge
+   - name: deploying on surge
     run: surge ./build trainig-testing-waqar.surge.sh/ --token $ {{ secrets.TOKEN }}
